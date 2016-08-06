@@ -1,0 +1,45 @@
+{
+  "name": "broccoli-livereload",
+  "version": "0.0.0",
+  "description": "Broccoli plugin for adding livereload capabilities",
+  "main": "lib/index.js",
+  "scripts": {
+    "test-watch": "mocha test/spec --watch --check-leaks",
+    "test": "mocha test/spec --check-leaks",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- test/spec --check-leaks",
+    "docs": "jsdoc lib --destination docs --configure .jsdoc.json --readme README.md ",
+    "preversion": "npm run test && npm run changelog && git add -A CHANGELOG.md",
+    "version": "",
+    "postversion": "git push && git push --tags",
+    "release-major": "npm version major -m \"chore(release): v%s\"",
+    "release-minor": "npm version minor -m \"chore(release): v%s\"",
+    "release-patch": "npm version patch -m \"chore(release): v%s\"",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+   },
+  "bugs": {
+    "url": "https://github.com/stfsy/broccoli-livereload/issues"
+  },
+  "homepage": "https://github.com/stfsy/broccoli-livereload#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stfsy/broccoli-livereload"
+  },
+  "keywords": [
+    "broccoli-plugin", "broccoli-filter", "livereload"
+  ],
+  "author": "Stefan Pfaffel",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-spies": "^0.7.1",
+    "conventional-changelog": "^1.1.0",
+    "istanbul": "^0.4.4",
+    "minami": "^1.1.1",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "broccoli-caching-writer": "^3.0.2",
+    "livereload": "^0.5.0",
+    "node-html-light": "^0.2.0"
+  }
+}
