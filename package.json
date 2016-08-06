@@ -1,6 +1,6 @@
 {
   "name": "broccoli-livereload",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Broccoli plugin for adding livereload capabilities",
   "main": "lib/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "release-minor": "npm version minor -m \"chore(release): v%s\"",
     "release-patch": "npm version patch -m \"chore(release): v%s\"",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
-   },
+  },
   "bugs": {
     "url": "https://github.com/stfsy/broccoli-livereload/issues"
   },
@@ -25,7 +25,9 @@
     "url": "https://github.com/stfsy/broccoli-livereload"
   },
   "keywords": [
-    "broccoli-plugin", "broccoli-filter", "livereload"
+    "broccoli-plugin",
+    "broccoli-filter",
+    "livereload"
   ],
   "author": "Stefan Pfaffel",
   "license": "MIT",
