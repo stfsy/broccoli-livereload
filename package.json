@@ -1,6 +1,6 @@
 {
   "name": "broccoli-livereload",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Broccoli plugin for adding livereload capabilities",
   "main": "lib/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- test/spec --check-leaks",
     "docs": "jsdoc lib --destination docs --configure .jsdoc.json --readme README.md ",
     "preversion": "npm run test && npm run changelog && git add -A CHANGELOG.md",
-    "version": "",
+    "version": "npm run changelog && git add -A CHANGELOG.md",
     "postversion": "git push && git push --tags",
     "release-major": "npm version major -m \"chore(release): v%s\"",
     "release-minor": "npm version minor -m \"chore(release): v%s\"",
@@ -40,7 +40,7 @@
     "mocha": "^2.5.3"
   },
   "dependencies": {
-    "broccoli-caching-writer": "^3.0.2",
+    "broccoli-filter": "^1.2.3",
     "livereload": "^0.5.0",
     "node-html-light": "^0.2.0"
   }
