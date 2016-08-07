@@ -1,6 +1,6 @@
 {
   "name": "broccoli-livereload",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Broccoli plugin for adding livereload capabilities",
   "main": "lib/index.js",
   "scripts": {
