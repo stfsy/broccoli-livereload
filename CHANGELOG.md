@@ -1,3 +1,8 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/stfsy/broccoli-livereload/compare/v0.0.1...v0.1.1) (2016-08-07)
+
+
+
 <a name="0.0.1"></a>
 ## [0.0.1](https://github.com/stfsy/broccoli-livereload/compare/v0.1.0...v0.0.1) (2016-08-07)
 
