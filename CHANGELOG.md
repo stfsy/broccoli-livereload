@@ -1,3 +1,13 @@
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/stfsy/broccoli-livereload/compare/v0.1.2...v0.2.0) (2016-10-08)
+
+
+### Features
+
+* **index.js:** allow multiple targets using a regular expression ([825b312](https://github.com/stfsy/broccoli-livereload/commit/825b312))
+
+
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://github.com/stfsy/broccoli-livereload/compare/v0.1.1...v0.1.2) (2016-08-10)
 
