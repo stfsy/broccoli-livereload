@@ -15,8 +15,7 @@ This plugin will inject the livereload script into the target html file and open
 
 In case you only want to inject a livereload script you could use [Dremora's](https://github.com/Dremora) [broccoli-inject-livereload](https://github.com/Dremora/broccoli-inject-livereload) 
 
-## Example
-
+## Example using a single html target 
 ```js
 const BroccoliLivereload = require('broccoli-livereload')
 
@@ -27,7 +26,18 @@ const reloadable = new BroccoliLivereload('app', {
 module.exports = reloadable
 ```
 
-## Example with costum port
+## Example using a regular expression to target multiple html files
+```js
+const BroccoliLivereload = require('broccoli-livereload')
+
+const reloadable = new BroccoliLivereload('app', {
+    target: /^[a-zA-Z._-]+.html$/
+})
+
+module.exports = reloadable
+```
+
+## Example using a costum port
 
 ```js
 const BroccoliLivereload = require('broccoli-livereload')
@@ -47,8 +57,6 @@ module.exports = reloadable
 ```js
 npm install broccoli-livereload --save-dev
 ```
-
-## Documentation
 
 ## License
 
