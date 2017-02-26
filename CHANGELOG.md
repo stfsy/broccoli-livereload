@@ -1,3 +1,13 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/stfsy/broccoli-livereload/compare/v0.2.0...v1.0.0) (2017-02-26)
+
+
+### Features
+
+* **index.js:** do not add script when building ([041c73f](https://github.com/stfsy/broccoli-livereload/commit/041c73f))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/stfsy/broccoli-livereload/compare/v0.1.2...v0.2.0) (2016-10-08)
 
