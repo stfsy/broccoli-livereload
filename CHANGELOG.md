@@ -1,3 +1,14 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/stfsy/broccoli-livereload/compare/v1.0.0...v1.1.0) (2017-06-05)
+
+
+### Bug Fixes
+
+* **tag.js:** fix tag is undefined ([27469b9](https://github.com/stfsy/broccoli-livereload/commit/27469b9))
+* **tag.js:** fix text.fromString is deprecated ([b08acb3](https://github.com/stfsy/broccoli-livereload/commit/b08acb3))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/stfsy/broccoli-livereload/compare/v0.2.0...v1.0.0) (2017-02-26)
 
