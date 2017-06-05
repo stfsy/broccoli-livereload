@@ -9,9 +9,10 @@ const Injector = require(resolve('lib/injector'))
 describe('Injector', () => {
 
     let injector = null
+    let injectedHtmlString = '<div id="test-div"></div>'
 
     beforeEach(() => {
-        injector = new Injector(/index[-0-9a-z]*.html/, Node.fromString('<div id="test-div"></div>'))
+        injector = new Injector(/index[-0-9a-z]*.html/, Node.fromString(injectedHtmlString))
     })
 
     describe('.matches', () => {
@@ -33,6 +34,21 @@ describe('Injector', () => {
         it('does no match', () => {
             const matches = injector.matches('file.html')
             expect(matches).to.be.falsy
+        })
+    })
+    describe('.inject', () => {
+        let html = null
+        beforeEach(() => {
+            html = `
+                <html>
+                <head></head>
+                <body></body>
+                </html>
+            `
+        })
+        it('adds the livereload script', () => {
+            const htmlWithLiveReload = injector.inject(html).toString('utf-8')
+            expect(htmlWithLiveReload.indexOf('<div id="test-div"></div>')).to.be.greaterThan(-1)
         })
     })
 })
