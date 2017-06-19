@@ -1,3 +1,13 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/stfsy/broccoli-livereload/compare/v1.2.0...v1.2.1) (2017-06-19)
+
+
+### Bug Fixes
+
+* **injector.js:** error if target is not converted to string ([dfcb1c9](https://github.com/stfsy/broccoli-livereload/commit/dfcb1c9))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/stfsy/broccoli-livereload/compare/v1.1.0...v1.2.0) (2017-06-19)
 
