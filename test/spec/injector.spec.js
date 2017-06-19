@@ -15,7 +15,10 @@ describe('Injector', () => {
         injector = new Injector(/index[-0-9a-z]*.html/, Node.fromString(injectedHtmlString))
     })
 
-    describe('.matches', () => {
+    describe('.matches regex ', () => {
+        beforeEach(() => {
+            injector = new Injector(/index[-0-9a-z]*.html/, Node.fromString(injectedHtmlString))
+        })
         it('index.html', () => {
             const matches = injector.matches('index.html')
             expect(matches).to.be.true
@@ -26,6 +29,29 @@ describe('Injector', () => {
             expect(matches).to.be.true
         })
 
+        it('index-a2b3c.html', () => {
+            const matches = injector.matches('index-a2b3c.html')
+            expect(matches).to.be.true
+        })
+
+        it('does no match', () => {
+            const matches = injector.matches('file.html')
+            expect(matches).to.be.false
+        })
+    })
+    describe('.matches string', () => {
+        beforeEach(() => {
+            injector = new Injector('index[-0-9a-z]*.html', Node.fromString(injectedHtmlString))
+        })
+        it('index.html', () => {
+            const matches = injector.matches('index.html')
+            expect(matches).to.be.true
+        })
+
+        it('index-abc.html', () => {
+            const matches = injector.matches('index-abc.html')
+            expect(matches).to.be.true
+        })
         it('index-a2b3c.html', () => {
             const matches = injector.matches('index-a2b3c.html')
             expect(matches).to.be.true
