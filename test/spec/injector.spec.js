@@ -18,22 +18,22 @@ describe('Injector', () => {
     describe('.matches', () => {
         it('index.html', () => {
             const matches = injector.matches('index.html')
-            expect(matches).to.be.truthy
+            expect(matches).to.be.true
         })
 
         it('index-abc.html', () => {
             const matches = injector.matches('index-abc.html')
-            expect(matches).to.be.truthy
+            expect(matches).to.be.true
         })
 
         it('index-a2b3c.html', () => {
             const matches = injector.matches('index-a2b3c.html')
-            expect(matches).to.be.truthy
+            expect(matches).to.be.true
         })
 
         it('does no match', () => {
             const matches = injector.matches('file.html')
-            expect(matches).to.be.falsy
+            expect(matches).to.be.false
         })
     })
     describe('.inject', () => {
