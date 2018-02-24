@@ -32,17 +32,17 @@
   "author": "Stefan Pfaffel",
   "license": "MIT",
   "devDependencies": {
-    "broccoli": "^1.1.2",
-    "chai": "^4.0.2",
-    "chai-spies": "^0.7.1",
-    "conventional-changelog-cli": "^1.3.0",
+    "broccoli": "^1.1.4",
+    "chai": "^4.1.2",
+    "chai-spies": "^1.0.0",
+    "conventional-changelog-cli": "^1.3.14",
     "istanbul": "^0.4.4",
     "minami": "^1.1.1",
-    "mocha": "^3.4.2"
+    "mocha": "^5.0.1"
   },
   "dependencies": {
-    "broccoli-filter": "^1.2.4",
-    "livereload": "^0.6.2",
+    "broccoli-filter": "^1.3.0",
+    "livereload": "^0.6.3",
     "node-html-light": "^1.0.0"
   }
 }
