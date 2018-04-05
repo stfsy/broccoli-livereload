@@ -1,3 +1,13 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/stfsy/broccoli-livereload/compare/v1.2.1...v1.3.0) (2018-04-05)
+
+
+### Features
+
+* notify LiveReload of every changed file ([698cc0d](https://github.com/stfsy/broccoli-livereload/commit/698cc0d))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/stfsy/broccoli-livereload/compare/v1.2.0...v1.2.1) (2017-06-19)
 
