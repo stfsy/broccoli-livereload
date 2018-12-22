@@ -1,3 +1,14 @@
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/stfsy/broccoli-livereload/compare/v1.3.0...v1.4.0) (2018-12-22)
+
+
+### Features
+
+* update dependencies ([fe6c91c](https://github.com/stfsy/broccoli-livereload/commit/fe6c91c))
+* update dependencies ([bfd6012](https://github.com/stfsy/broccoli-livereload/commit/bfd6012))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/stfsy/broccoli-livereload/compare/v1.2.1...v1.3.0) (2018-04-05)
 
