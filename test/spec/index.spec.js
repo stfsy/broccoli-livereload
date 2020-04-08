@@ -11,9 +11,8 @@ describe('BroccoliLivereload', () => {
     before(() => {
         fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hi.html'));
     })
-    before(function () {
-        this.timeout(10000);
-        return puppeteer.launch().then((b) => {
+    before(() => {
+        return puppeteer.launch({ headless: true }).then((b) => {
             browser = b
             return browser.newPage()
         }).then((p) => {
@@ -21,7 +20,7 @@ describe('BroccoliLivereload', () => {
         })
     })
     after(() => {
-        fs.writeFileSync('test/fixtures/test.html', fs.readFileSync('test/fixtures/index-hi.html'));
+        fs.writeFileSync('test/fixtures/test.html', fs.readFileSync('test/fixtures/index-hi.html'))
         return browser.close()
     })
 
@@ -38,6 +37,7 @@ describe('BroccoliLivereload', () => {
                 fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hello.html'));
                 return new Promise((resolve) => setTimeout(resolve, 500)) // wait because we debounce changes
             })
+            .then(() => {
                 return page.evaluate(() => {
                     return document.querySelector("h1").textContent;
                 })
