@@ -35,7 +35,7 @@ describe('BroccoliLivereload', () => {
             })
             .then(() => {
                 fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hello.html'));
-                return new Promise((resolve) => setTimeout(resolve, 1500)) // wait because we debounce changes
+                return new Promise((resolve) => setTimeout(resolve, 5000)) // wait because we debounce changes
             })
             .then(() => {
                 return page.evaluate(() => {
