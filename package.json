@@ -6,7 +6,8 @@
   "scripts": {
     "test-serve": "cd test/fixtures && node run-broccoli serve",
     "test-watch": "mocha test/spec --watch --check-leaks",
-    "test": "npm run test-serve & sleep 5 && mocha test/spec --check-leaks",
+    "test-win": "mocha test/spec --check-leaks --timeout 50000",
+    "test": "npm run test-serve & sleep 5 && mocha test/spec --check-leaks --timeout 50000",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- test/spec --check-leaks",
     "docs": "jsdoc lib --destination docs --configure .jsdoc.json --readme README.md ",
     "preversion": "npm run test",
