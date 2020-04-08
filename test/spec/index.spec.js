@@ -33,10 +33,11 @@ describe('BroccoliLivereload', () => {
                 })
             }).then((text) => {
                 expect(text).to.equal('Hi!')
-            }).then(() => {
+            })
+            .then(() => {
                 fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hello.html'));
-                return new Promise((resolve) => setInterval(resolve, 1000)) // wait because we debounce changes
-            }).then(() => {
+                return new Promise((resolve) => setTimeout(resolve, 500)) // wait because we debounce changes
+            })
                 return page.evaluate(() => {
                     return document.querySelector("h1").textContent;
                 })
