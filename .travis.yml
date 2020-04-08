@@ -1,7 +1,5 @@
 language: node_js
 dist: trusty
-notifications:
-  email: false
 addons:
   apt:
     packages:
