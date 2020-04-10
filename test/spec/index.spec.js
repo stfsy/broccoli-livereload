@@ -32,11 +32,9 @@ describe('BroccoliLivereload', () => {
                 })
             }).then((text) => {
                 expect(text).to.equal('Hi!')
-            })
-            .then(() => {
+            }).then(() => {
                 fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hello.html'));
-            })
-            .then(() => {
+            }).then(() => {
                 let count = 0
                 const selectHeadlineAndAssert = () => {
                     return page.evaluate(() => {
@@ -49,6 +47,7 @@ describe('BroccoliLivereload', () => {
                         if (count++ < 10) {
                             console.log('Will retry')
                             return new Promise((resolve, reject) => {
+                                fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hello.html'));
                                 setTimeout(() => {
                                     selectHeadlineAndAssert().then(resolve).catch(reject)
                                 }, 3000)
