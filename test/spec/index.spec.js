@@ -43,14 +43,18 @@ describe('BroccoliLivereload', () => {
                         return document.querySelector("h1").textContent;
                     }).then((text) => {
                         expect(text).to.equal('Hello!')
+                        console.log('Found Hello in', text)
                     }).catch((error) => {
+                        console.log('Received error', error)
                         if (count++ < 3) {
+                            console.log('Will retry')
                             return new Promise((resolve, reject) => {
                                 setTimeout(() => {
                                     selectHeadlineAndAssert().then(resolve).catch(reject)
                                 }, 3000)
                             })
                         } else {
+                            console.log('I\'m out')
                             return Promise.reject(error)
                         }
                     })
