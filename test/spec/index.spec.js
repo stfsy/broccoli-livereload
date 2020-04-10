@@ -35,14 +35,24 @@ describe('BroccoliLivereload', () => {
             })
             .then(() => {
                 fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hello.html'));
-                return new Promise((resolve) => setTimeout(resolve, 5000)) // wait because we debounce changes
             })
             .then(() => {
-                return page.evaluate(() => {
-                    return document.querySelector("h1").textContent;
-                })
+                const count = 0
+                const selectHeadlineAndAssert = () => {
+                    return page.evaluate(() => {
+                        return document.querySelector("h1").textContent;
+                    }).then((text) => {
+                        expect(text).to.equal('Hello!')
+                    }).catch((error) => {
+                        if (count++ < 3) {
+                            return new Promise((resolve) => setTimeout(resolve, 3000)) // wait because we debounce changes
+                        } else {
+                            return Promise.reject(error)
+                        }
+                    })
+                }
+
             }).then((text) => {
-                expect(text).to.equal('Hello!')
             })
     })
 })
