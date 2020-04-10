@@ -46,7 +46,7 @@ describe('BroccoliLivereload', () => {
                         console.log('Found Hello in', text)
                     }).catch((error) => {
                         console.log('Received error', error)
-                        if (count++ < 3) {
+                        if (count++ < 10) {
                             console.log('Will retry')
                             return new Promise((resolve, reject) => {
                                 setTimeout(() => {
