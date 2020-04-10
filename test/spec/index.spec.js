@@ -45,7 +45,11 @@ describe('BroccoliLivereload', () => {
                         expect(text).to.equal('Hello!')
                     }).catch((error) => {
                         if (count++ < 3) {
-                            return new Promise((resolve) => setTimeout(resolve, 3000)) // wait because we debounce changes
+                            return new Promise((resolve, reject) => {
+                                setTimeout(() => {
+                                    selectHeadlineAndAssert().then(resolve).catch(reject)
+                                }, 3000)
+                            })
                         } else {
                             return Promise.reject(error)
                         }
