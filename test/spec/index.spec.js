@@ -37,7 +37,7 @@ describe('BroccoliLivereload', () => {
                 fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hello.html'));
             })
             .then(() => {
-                const count = 0
+                let count = 0
                 const selectHeadlineAndAssert = () => {
                     return page.evaluate(() => {
                         return document.querySelector("h1").textContent;
@@ -60,7 +60,8 @@ describe('BroccoliLivereload', () => {
                     })
                 }
 
-            }).then((text) => {
+                return selectHeadlineAndAssert()
+
             })
     })
 })
