@@ -33,19 +33,14 @@ describe('BroccoliLivereload', () => {
             }).then((text) => {
                 expect(text).to.equal('Hi!')
             }).then(() => {
-                fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hello.html'));
-            }).then(() => {
                 let count = 0
                 const selectHeadlineAndAssert = () => {
                     return page.evaluate(() => {
                         return document.querySelector("h1").textContent;
                     }).then((text) => {
                         expect(text).to.equal('Hello!')
-                        console.log('Found Hello in', text)
                     }).catch((error) => {
-                        console.log('Received error', error)
                         if (count++ < 10) {
-                            console.log('Will retry')
                             return new Promise((resolve, reject) => {
                                 fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hello.html'));
                                 setTimeout(() => {
@@ -53,7 +48,6 @@ describe('BroccoliLivereload', () => {
                                 }, 3000)
                             })
                         } else {
-                            console.log('I\'m out')
                             return Promise.reject(error)
                         }
                     })
