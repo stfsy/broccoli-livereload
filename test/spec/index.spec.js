@@ -1,5 +1,8 @@
 'use strict'
 
+const BroccoliTestRunner = require('broccoli-test-runner')
+const runner = new BroccoliTestRunner('test/fixtures')
+
 const puppeteer = require('puppeteer')
 
 const expect = require('chai').expect
@@ -8,6 +11,9 @@ const fs = require('fs')
 describe('BroccoliLivereload', () => {
     let browser = null
     let page = null
+    before(() => {
+       return  runner.serve()
+    })
     before(() => {
         fs.writeFileSync('test/fixtures/app/test.html', fs.readFileSync('test/fixtures/index-hi.html'));
     })
@@ -22,6 +28,9 @@ describe('BroccoliLivereload', () => {
     after(() => {
         fs.writeFileSync('test/fixtures/test.html', fs.readFileSync('test/fixtures/index-hi.html'))
         return browser.close()
+    })
+    after(() => {
+        return runner.stop()
     })
 
     it('should notify the browser of updates', () => {
