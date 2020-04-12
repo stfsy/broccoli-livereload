@@ -1,3 +1,23 @@
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/stfsy/broccoli-livereload/compare/v1.4.0...v1.6.0) (2020-04-12)
+
+
+### Bug Fixes
+
+* build fails if no head tag present ([25e1322](https://github.com/stfsy/broccoli-livereload/commit/25e1322)), closes [#4](https://github.com/stfsy/broccoli-livereload/issues/4)
+* build fails if no head tag present ([ec0ad63](https://github.com/stfsy/broccoli-livereload/commit/ec0ad63)), closes [#4](https://github.com/stfsy/broccoli-livereload/issues/4)
+* hanging tests by calling setTimeout ([3c31475](https://github.com/stfsy/broccoli-livereload/commit/3c31475))
+
+
+### Features
+
+* update dependencies ([f83a9a1](https://github.com/stfsy/broccoli-livereload/commit/f83a9a1))
+* update livereload dependency ([576f414](https://github.com/stfsy/broccoli-livereload/commit/576f414))
+* update node-html-light ([cda458a](https://github.com/stfsy/broccoli-livereload/commit/cda458a))
+* use broccoli plugin adapter ([044668e](https://github.com/stfsy/broccoli-livereload/commit/044668e))
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/stfsy/broccoli-livereload/compare/v1.4.0...v1.5.0) (2020-03-22)
 
