@@ -37,7 +37,7 @@ const reloadable = new BroccoliLivereload('app', {
 module.exports = reloadable
 ```
 
-## Example using a costum port
+## Example using a custom port
 
 ```js
 const BroccoliLivereload = require('broccoli-livereload')
