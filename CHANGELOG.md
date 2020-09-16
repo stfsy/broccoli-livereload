@@ -1,3 +1,13 @@
+<a name="1.6.1"></a>
+## [1.6.1](https://github.com/stfsy/broccoli-livereload/compare/v1.6.0...v1.6.1) (2020-09-16)
+
+
+### Bug Fixes
+
+* broc cli shorthand cause crash ([ab30ecb](https://github.com/stfsy/broccoli-livereload/commit/ab30ecb))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/stfsy/broccoli-livereload/compare/v1.4.0...v1.6.0) (2020-04-12)
 
