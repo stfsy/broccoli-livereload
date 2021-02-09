@@ -1,3 +1,13 @@
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/stfsy/broccoli-livereload/compare/v1.6.1...v1.7.0) (2021-02-09)
+
+
+### Features
+
+* update outdated dependencies ([e043e01](https://github.com/stfsy/broccoli-livereload/commit/e043e01))
+
+
+
 <a name="1.6.1"></a>
 ## [1.6.1](https://github.com/stfsy/broccoli-livereload/compare/v1.6.0...v1.6.1) (2020-09-16)
 
