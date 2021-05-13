@@ -1,3 +1,14 @@
+# [1.8.0](https://github.com/stfsy/broccoli-livereload/compare/v1.7.0...v1.8.0) (2021-05-13)
+
+
+### Features
+
+* update outdated dependencies ([884b9a3](https://github.com/stfsy/broccoli-livereload/commit/884b9a3eb815d63656be2efa9611e5c4e10a5c76))
+* update vulnerable dependencies ([ccb46e1](https://github.com/stfsy/broccoli-livereload/commit/ccb46e1a87da05df357610e0a4dccd7bbd26808b))
+* update vulnerable dependencies ([933d755](https://github.com/stfsy/broccoli-livereload/commit/933d75582dc1a7250174f437aee88bf2ddc4398e))
+
+
+
 <a name="1.7.0"></a>
 # [1.7.0](https://github.com/stfsy/broccoli-livereload/compare/v1.6.1...v1.7.0) (2021-02-09)
 
