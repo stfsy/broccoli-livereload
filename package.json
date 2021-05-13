@@ -32,10 +32,10 @@
   "author": "Stefan Pfaffel",
   "license": "MIT",
   "devDependencies": {
-    "broccoli": "^3.5.0",
+    "broccoli": "^3.5.2",
     "broccoli-cli": "^1.0.0",
     "broccoli-test-runner": "^1.0.0",
-    "chai": "^4.3.0",
+    "chai": "^4.3.4",
     "chai-spies": "^1.0.0",
     "conventional-changelog-cli": "^2.1.1",
     "istanbul": "^0.4.4",
@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "broccoli-plugin-adapter": "^1.2.1",
-    "livereload": "^0.9.1",
+    "livereload": "^0.9.3",
     "node-html-light": "^1.4.0"
   }
 }
