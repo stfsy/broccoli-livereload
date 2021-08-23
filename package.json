@@ -44,7 +44,7 @@
     "puppeteer": "^10.2.0"
   },
   "dependencies": {
-    "broccoli-plugin-adapter": "^1.4.0",
+    "broccoli-plugin-adapter": "^1.4.1",
     "livereload": "^0.9.3",
     "node-html-light": "^2.11.0"
   }
