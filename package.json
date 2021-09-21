@@ -46,6 +46,6 @@
   "dependencies": {
     "broccoli-plugin-adapter": "^1.4.1",
     "livereload": "^0.9.3",
-    "node-html-light": "^2.11.0"
+    "node-html-light": "^2.12.0"
   }
 }
