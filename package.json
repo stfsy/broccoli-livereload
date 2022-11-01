@@ -41,7 +41,7 @@
     "istanbul": "^0.4.4",
     "minami": "^1.1.1",
     "mocha": "^10.1.0",
-    "puppeteer": "^18.0.5"
+    "puppeteer": "^19.2.0"
   },
   "dependencies": {
     "broccoli-plugin-adapter": "^1.4.1",
